@@ -1,0 +1,48 @@
+.explain_page{
+
+    margin-top: 52px;
+    padding: 1%;
+font-size: 110%;
+ 
+}
+#Pdf_contain{
+    color: #888888;
+    padding: 1%;
+    border-left: 1px solid grey;
+
+}
+#expalin_contains h4{
+	 color: #18bae4;
+}
+ #Pdf_contain img {
+    width: 100%;
+    vertical-align: middle;
+}
+#Pdf_contain h4{
+	    line-height: 120%;  
+ letter-spacing: 1px;
+
+	color: #18bae4;
+}
+#Pdf_contain h3{
+	color: #18bae4;
+
+
+}
+#Video{
+    border-left: 1px solid grey;
+    padding: 1%;
+}
+#Qusetions{
+        padding: 1%;
+    border-left: 1px solid grey;
+}
+#Realted_Study{
+        padding: 1%;
+    border-left: 1px solid grey;
+}
+.col-md-10{
+    line-height: 200%;  
+font-size: 110%;
+ letter-spacing: 1px;
+}

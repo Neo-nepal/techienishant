@@ -1,0 +1,63 @@
+
+
+.Contact_form{
+	text-align: center;
+	background-color: white;
+}
+.footer{
+	background-color:  #18bae4;
+	color: white;
+}
+.contact_form {
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+.contact_form h3{
+color: #18bae4;	
+}
+#FTY{
+		text-align: left;
+}
+#FTY img{
+	width: 12%;
+}
+#fb{
+padding: 1.5%;
+	background-position:center;
+background-position:center;
+	transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+#fb:hover{
+		transform: scale(1.08);
+	 transform: scale(1.8);
+  -moz-transform: scale(1.8);
+  -webkit-transform: scale(1.8);
+  -o-transform: scale(1.8);
+  -ms-transform: scale(1.8); /* IE 9 */
+  -ms-filter:
+}
+.contacts{
+
+	background-image: url('http://localhost/question_bank/assetes/Image/connect_image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-attachment: fixed;
+    text-align: center;
+	  color: white;
+	  margin-top: 15px;
+    padding: 2%;
+}
+.contacts img{
+		width: 10%;
+   padding: 1%;
+  }
+.contacts h2{
+	color: #18bae4;
+}

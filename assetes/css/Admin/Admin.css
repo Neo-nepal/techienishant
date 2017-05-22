@@ -1,0 +1,232 @@
+
+.Admin{
+  margin-top: 52px;
+  text-align: center;
+  padding: 1%;
+}
+.Admin img {
+  width: 100%;
+  border:2px solid white;
+}
+.Admin .img-circle {
+
+ width: 50px;
+ height: 50px;
+ margin-left: 26px;
+
+ background-size: cover;
+
+
+}
+.Admin img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.Admin h4{
+	color: #18bae4;
+} 
+ .Admin #sell{
+ 		color: #888888;
+ }
+  .Admin p{
+  		color: #888888;
+  }
+
+
+
+  #loading_topic input[type=text], select {
+    width: 100%;
+    margin: 25px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+  #loading_topic h5{
+  		color: #18bae4;
+  }
+    #loading_topic h4{
+  		color: #18bae4;
+  }
+   #loading_topic p{
+   		color: #888888;
+
+   }
+     #loading_topic{
+     	color: #888888;
+     }
+.class h4{
+  		color: #18bae4;
+  }
+
+.row{
+  width: 100%;
+}
+.wel_come_admin{
+  padding: 1%;
+    color: #888888;
+    border-bottom: 1px solid grey;
+}
+#massage {
+    color: white;
+     width: 20px;
+    height: 20px;
+  
+    padding: 5px;
+
+}
+.totals{
+padding: 1%;
+}
+
+#Main_admin{
+    color: #888888;
+    background-color: white;
+    padding: 1%;
+}
+#Study_cantains{
+   color: #888888;
+    background-color: white;
+    padding: 1%;
+}
+#Study_cantains img{
+  width: 15%;
+}
+#Study_cantains th{
+  text-align: center;
+
+}
+#Study_cantains a{
+  text-decoration: none;
+}
+#Study_cantains h5{
+font-size: 22px;
+}
+
+#Self_study{
+    color: #888888;
+       background-color: white;
+       padding: 3%;
+}
+#totals_col{
+ 
+}
+#totals_col{
+    color: white;
+    border-right: 2px solid rgb(4, 121, 116);
+}
+.Total_first_part p {
+        color: white;
+}
+.Total_first_part{
+background-color: #0aa699;
+     padding: 5%;
+    color: black;
+}
+.Total_second_part #totals_col{
+   color: white;
+    border-right: 2px solid rgb(90, 60, 121);
+}
+.Total_second_part p {
+        color: white;
+}
+.Total_second_part{
+background-color:#735f87;
+     padding: 5%;
+    color: black;
+}
+.Admin_test{
+      padding: 1%;
+       background-color: white;
+       padding: 1%;
+}
+.Admin_test input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.Admin_test input[type=submit] {
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.Admin_test input[type=submit]:hover {
+    background-color: #45a049;
+
+}
+.transfer{
+      background-color: #735f87;
+    margin-left: 0px;
+    padding: 3%;
+    border-top: 4px solid white;
+
+}
+.transfer p{
+ color: white;
+}
+.transfer h5{
+ color: black;
+}
+.btn btn-defult{
+  background-color: black;
+}
+#transfer a {
+    color: white;
+    text-decoration: none;
+}
+.btn:hover{
+  color: red;
+}
+.navbar_new{
+  padding: 2px;
+}
+.Admin ul {
+    list-style-type: none;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.Admin li a {
+    display: block;
+    color: #000;
+    height: 50px;
+    width: 187px;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+
+
+}
+
+/* Change the link color on hover */
+.Admin li a:hover {
+    background-color: #f1f1f1;
+      color: #000;
+      text-decoration: none;
+}
+#loading_topic{
+
+}
+.Admin_col_total{
+      background-color: #0aa699;
+    padding: 5%;
+    color: black;
+}
+.Admin_col_total p{
+  
+    color: white;
+}
+#folder{
+    float: right;
+}

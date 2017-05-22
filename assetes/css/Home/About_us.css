@@ -1,0 +1,41 @@
+.About_us{
+	margin-top: 51px;
+	text-align: center;
+	padding: 2%;
+}
+.About_us h1,h3{
+	color: #18bae4;
+}
+.About_us p{
+	color: #888888;
+	font-size: 110%;
+}
+.About_us img{
+	width: 100%;
+}
+.Executive h3{
+color: #18bae4;	
+}
+.Executive img{
+	padding: 2%;
+	width: 100%;
+}
+.Executive h6{
+color: #18bae4;	
+
+}
+.Executive .contacts_icon img{
+	width: 15%;
+	text-align: left;
+}
+.Executive .contacts_icon{
+	text-align: center;
+}
+.Executive.contacts_icon img{
+	float: left;
+padding-right:  4%;
+
+}
+#About_us_main_image img{
+    width: 65%;
+}

@@ -1,0 +1,337 @@
+.Home_image{
+	text-align: center;
+	background-image: url('http://localhost/quiz/assetes/Image/home-image.jpg');
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-attachment: fixed;
+ background-position: top 250px;
+    margin-top: 51px;
+
+  }
+
+#linker a {
+    color: black;
+    box-shadow: 0 0 5px white;
+    padding: 1%;
+    font-size:100%;
+    background-color: white;
+
+}
+a:hover{
+    background-color: rgba(51, 51, 51, 0.27);
+    text-decoration: none;
+
+
+}
+#linker{
+  padding: 1%;
+  margin-top:5.8%;
+  font-family: Lucida;
+  box-shadow: 0 0 5px white;
+  color: #FFF;
+  height: 200px;
+  width: 200px;
+  border-radius: 120px;
+  display: inline-block;
+  background-color: rgba(51, 51, 51, 0.27);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  font-size:230%;
+  letter-spacing: 0.15rem;
+
+}
+.about_us h3{
+color: #18bae4;
+font-size: 200%;
+}
+.about_us{
+
+color: #18bae4;
+margin-top: 1%;
+}
+.about_us p{
+text-align: left;
+color: #888888;
+margin-top: 1%;
+
+}
+.about_us8{
+color: red;
+    width: 901px;
+
+}
+.about_us4{
+ float: left;
+    margin: 5px;
+    padding: 15px;
+    max-width: 300px;
+    height: 300px;
+    border: 1px solid black;
+}
+#we_will_open{
+
+      background-color: rgba(51, 51, 51, 0.27);
+      box-shadow: 0 0 5px white;
+      text-align: center;
+       font-family: Lucida;
+       width: 100%;
+    
+       padding: 1%;
+       color: white;
+
+}
+#we_will_open a{
+  
+    box-shadow: 0 0 5px white;
+    background:  #18BAE4;
+    padding: 1%;
+    color: black;
+    font-size:150%;
+   font-family: Lucida;
+}
+#we_will_open a:hover{
+   background: #8CD4E6;
+ list-style-type: none;
+
+}
+
+
+
+}
+.scrollToTop{
+  width:60px; 
+  height:60px;
+  border-radius: 2px;
+  position:fixed;
+  top:500px;
+  right:40px;
+  display:none;
+  background-color: white;
+  border-radius: 40px;
+}
+.scrollToTop:hover{
+  text-decoration:none;
+
+}
+.scrollToTop a{
+  color: black;
+  background: white;
+text-decoration: none;
+}
+
+
+}
+
+body{
+	background-color: white;
+}
+.for_you{
+	color: #393939;
+	text-align: center;
+}
+
+.for_you p{
+color: #888888;
+
+}
+.for_you img{
+width: 10%;
+border-radius: 50%;
+background-position:center;
+		background-position:center;
+	transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+.for_you img:hover{
+	 transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -ms-transform: scale(1.5); /* IE 9 */
+  -ms-filter:
+  
+}
+.for_you a{
+	transition: all 1s ease;
+
+	 color: #18bae4;
+    box-shadow: 0 0 5px white;
+    padding: 1%;
+    font-size:100%;
+    background-color: white;
+
+}
+.for_you a:hover{
+ transform: scale(1.5);
+ 
+    text-decoration: none;
+
+}
+.for_you h4{
+	color: #18bae4;
+}
+.our_team{
+	text-align: center;
+}
+
+.our_team h3,h4{
+		color: #18bae4;
+}
+.our_team img{
+	width: 80%;
+    padding: 1%;
+
+
+}
+.our_team p{
+	color: #888888;
+
+}
+.contacts{
+
+	background-image: url('http://localhost/question_bank/assetes/Image/connect_image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-attachment: fixed;
+    text-align: center;
+	  color: white;
+	  margin-top: 15px;
+    padding: 2%;
+}
+.contacts img{
+		width: 10%;
+   padding: 1%;
+  }
+.contacts h2{
+	color: #18bae4;
+}
+#our_team_col{
+	background-position:center;
+background-position:center;
+	transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+box-shadow: 0px 5px 5px 0px grey;
+padding:1%;
+height: 300px;
+}
+#our_team_col:hover{
+	transform: scale(1.08);
+	 transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+  -o-transform: scale(1.08);
+  -ms-transform: scale(1.08); /* IE 9 */
+  -ms-filter:
+}
+.bottom{
+	background-color:  #18bae4;
+	color: white;
+}
+.Contact_form{
+	text-align: center;
+	background-color: white;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+textarea{
+	 width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.contact_form {
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+.contact_form h3{
+color: #18bae4;	
+}
+#FTY{
+		text-align: left;
+}
+#FTY img{
+	width: 12%;
+}
+#fb{
+padding: 1.5%;
+	background-position:center;
+background-position:center;
+	transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+#fb:hover{
+		transform: scale(1.08);
+	 transform: scale(1.8);
+  -moz-transform: scale(1.8);
+  -webkit-transform: scale(1.8);
+  -o-transform: scale(1.8);
+  -ms-transform: scale(1.8); /* IE 9 */
+  -ms-filter:
+}
+.scrollToTop{
+  width:60px; 
+  height:60px;
+  border-radius: 2px;
+  top:500px;
+  right:40px;
+  display:none;
+  background-color: white;
+  border-radius: 40px;
+  margin-left: 1268px;
+    position: fixed;
+}
+.scrollToTop:hover{
+  text-decoration:none;
+
+}
+.scrollToTop a{
+  color: black;
+  background: white;
+text-decoration: none;
+}
+.city {
+   float: left;
+   margin: 10px;
+   padding: 10px;
+   max-width: 300px;
+   height: 300px;
+   border: 1px solid black;
+} 

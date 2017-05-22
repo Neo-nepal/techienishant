@@ -1,0 +1,133 @@
+.result{
+	margin-top: 60px;
+	color: #888888;
+}
+
+.massage_result h4{
+	color:green;	
+	text-align: center;
+	padding: 1%;
+}
+<!---- chart-->
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+body {
+  padding: 0 2em;
+  font-size: 1.3em;
+  font-family: 'Roboto', 'sans-serif';
+  color: white;
+  background: black;
+  input-placeholder: red;
+}
+h1 { color: papayawhip }
+
+
+.tick:before {
+  content: "\2713";
+  color: darkgreen;
+  padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px solid green;
+    border-radius: 20px;
+}
+.cross:before {
+  content: "\2717";
+  color: crimson;
+  padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px solid red;
+    border-radius: 20px;
+
+}
+.right_of_result{
+	padding: 2%;
+
+}
+#sing1{
+	background-color: rgba(0, 128, 0, 0.66);
+	padding: 4%;
+	color: white;
+	
+	text-align: center;
+}
+#sing2{
+	text-align: center;
+	background-color: rgba(255, 0, 0, 0.66);
+	padding: 4%;
+	color: white;
+;
+}
+#sing3{
+	text-align: center;
+	background-color: rgba(0, 0, 255, 0.66);	;
+	padding: 4%;
+	color: white;
+
+}
+#sing4{
+	text-align: center;
+	background-color: rgba(24, 186, 228, 0.66);	;
+	padding: 4%;
+	color: white;
+
+}
+.question_and_ans{
+color: #888888;
+
+
+}
+.question_and_ans h4{
+	color: #18bae4;	
+}
+.ANS{
+margin-top: 20px;
+color: green;	
+}
+.question_and_ans_massage{
+	padding: 2%;
+	text-align: center;
+	color: #18bae4;
+}
+.Re_try_link a:hover{
+		
+text-decoration: none;
+}
+.Re_try_link{
+	text-align: center;
+		
+}
+.Re_try_link a{
+	color: #18bae4;	
+}
+.Total_first_part p {
+        color: white;
+}
+.Total_first_part{
+background-color: #0aa699;
+     padding: 5%;
+    color: black;
+}
+.Total_second_part #totals_col{
+   color: white;
+    border-right: 2px solid rgb(90, 60, 121);
+}
+.Total_second_part p {
+        color: white;
+}
+.Total_second_part{
+background-color:#735f87;
+     padding: 5%;
+    color: black;
+}
+#totals_col{
+    color: white;
+    text-align: center;
+    border-right: 2px solid rgb(4, 121, 116);
+}
+#totals_col2{
+color: white;
+    text-align: center;	
+}
