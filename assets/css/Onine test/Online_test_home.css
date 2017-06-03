@@ -1,0 +1,21 @@
+.class_home_container{
+  margin-top: 51px;
+  text-align: center;
+}
+
+.class_home_container h3{
+	color: #18bae4;
+} 
+ .class_home_container #sell{
+ 		color: #888888;
+ }
+  .class_home_container p{
+  		color: #888888;
+  }
+  .bottom_link{
+	background-color:  #18bae4;
+	color: white;
+	padding: 2%;
+
+
+}
