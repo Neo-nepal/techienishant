@@ -8,49 +8,16 @@
 </head>
 <body>
   <?php $this->load->view('header.php'); ?>
-   <?php $i=0; $notated = 0; 
-                  $wrong = 0;  foreach ($Answer as $ans) {$i++;?>
-                    <td>  <?php   $total_question= $i; ?> </td> 
-                    <?php if (empty($_POST[$i])){?>
-                    <td style="color:red;  text-align: left;"><?php  $notated++ ?></td>  
-                    <?php }else{ $ans_check=$_POST[$i];?>
-                    <td><?php $a= $ans->ANS;if ($ans_check==$a){?><?php $_SESSION['right']++;}else{?><?php   $_SESSION['wrong']++ ;}?></td>
-                   <td><?php  $a= $ans->ANS;; ?></td><?php } ?>
-                    </tr>
-                      <?php  }?>
-    <div class="container">
-      <div class="result">
-        <div class="result_details">
-         <div class="Total_first_part">
-          <div class="row">
-            <div class="col-xs-3" id="totals_col">
-              <p>Total  <br>
-                        <span id="massage"> <?php if(empty($total_question)){ echo "0";}else{ echo $total_question; } ?></span></p>
-                      </div>
-                      <div class="col-xs-3" id="totals_col">
-                        <p> Currect<br>
-                        <span id="massage">  <?php if(empty( $_SESSION['right'])){ echo "0";}else{ echo $_SESSION['right']; } ?></span></p>
-                      </div>
-                      <div class="col-xs-3" id="totals_col">
-                        <p> Wrong <br>
-                        <span id="massage">  <?php if(empty($_SESSION['wrong'])){ echo "0";}else{ echo $total_question- $_SESSION['right']; }?></span></p>
-                      </div>
-                       <div class="col-xs-3" id="totals_col2">
-                        <p> Number <br>
-                        <span id="massage">  <?php echo  $pre= $_SESSION['right']*100/ $total_question; ?>% </span></p>
-                      </div>
-                    </div>
-                    <hr>
-                    <p>Best of luck</p>
-
-         </div>
-        </div>
-      </div>
-    </div>
+<?php foreach ($result as $key) {
+  echo $key->obtain_marks; echo "<br/>";
+ echo $key->total_marks; echo "<br/>"; 
+ echo $key->Wrong; echo "<br/>";
+  echo $key->Date; echo "<br/>";
+} ?>
 <div class="container">
   <div class="question_and_ans">
      <?php $i=0; foreach ($Answer as $class) {$i++;
-     $ans_check=$_POST[$i]; ?> 
+ $ans_check=$_POST[$i]; ?> 
      
     <?php if ($ans_check=="") {?>
      <h4> <?php echo $i ?>. <?php echo $class->quesations ; ?></h4>
@@ -123,7 +90,7 @@
                </div>
               </h5>
               <hr>
-<div id="ss" value= "11">11</div>
+
 
     <?php  } ?>
               
@@ -135,13 +102,3 @@
 <?php include 'footer.php'; ?>
 </body>
 </html>
-<script type="text/javascript">
-<p id="demo">Click the button to change the text in this paragraph.</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<script>
-function myFunction() {
-    document.getElementById("demo").innerHTML = "Hello World";
-}
-</script>

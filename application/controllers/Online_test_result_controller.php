@@ -18,17 +18,26 @@ class Online_test_result_controller extends CI_Controller
 	public function result()
 	{  
 		$_SESSION['right']=0;
+		 $_SESSION['wrong']=0;
        $data['Answer'] = $this->Online_test_result_model->get_answer();
-        foreach ( $data['Answer'] as $ans) {
-                  $i++;	
-                if ($_POST[$i] == $ans->ANS) {
-                  	
-                  echo $_POST[$i] ;
-                  echo $ans->ANS ;
-                  } 
-                  
-              }
+       $wrong = 0;  foreach (  $data['Answer'] as $ans) {
+						 $i++;
+						  $total_question= $i; 
+						 if (empty($_POST[$i])){$notated++ ;} else {
+						  if ($_POST[$i]==$ans->ANS){  $_SESSION['right']++;}else{   $_SESSION['wrong']++ ;}} 
+           }
+         $true_or_not =   $this->Online_test_result_model->Save_result( $_SESSION['right'],$_SESSION['wrong'],$notate,$total_question);
+        	$this->show_result();
     }
+    public function show_result()
+    { 
+    	$data['Answer'] = $this->Online_test_result_model->get_answer();
+    $data['result'] = $this->Online_test_result_model->show_result();
+    //print_r($data['result']);
+    	$this->load->view('online test/online_test_view_result',$data);	
+      session_destroy($_SESSION['right'],$_SESSION['wrong']);
+    }
+
 
 
 }?>
