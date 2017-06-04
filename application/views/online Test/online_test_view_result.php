@@ -7,7 +7,13 @@
   <link rel="stylesheet" href="<?= base_url();?>assets/css/Onine%20test/online_test_css_result.css">
 </head>
 <body>
-
+  <?php $this->load->view('header.php'); ?>
+<?php foreach ($result as $key) {
+  echo $key->obtain_marks; echo "<br/>";
+ echo $key->total_marks; echo "<br/>"; 
+ echo $key->Wrong; echo "<br/>";
+  echo $key->Date; echo "<br/>";
+} ?>
 <div class="container">
   <div class="question_and_ans">
      <?php $i=0; foreach ($Answer as $class) {$i++;
