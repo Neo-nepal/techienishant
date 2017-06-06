@@ -58,9 +58,11 @@ $data = array('start_time' => $start_time,
     $this->db->where( 'users_name', $_SESSION['username']);
    $this->db->update('Admin_test',$data);
    }
-   public function Save_result()
+   public function get_result()
    {
-     # code...
+     $this->db->where( 'Student_name', $_SESSION['username']);
+    $query = $this->db->get('result_table');
+       return $query->result();
    }
 }
 

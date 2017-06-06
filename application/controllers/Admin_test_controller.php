@@ -39,19 +39,31 @@ class Admin_test_controller extends CI_controller
      $data['admin_test']= $this->Admin_test_model->get_data_admin_test();
      $this->load->view('Admin Test/Admin_test_view',$data);
   }
- else{echo "Show result";}
+ else
+ {
+  $data['get_result']=$this->Admin_test_model->get_result();
+  $this->load->view('Admin Test/Result_show',$data);
+ }
 }}
    
 
   }
   public function Admin_result()
-  {
-      $_SESSION['right']=0;
-      $data['Answer'] = $this->Admin_test_model->get_answer();
-      $date['sumition_time'] = $this->Admin_test_model->sumition_time();
-
-      $this->load->view('Admin Test/Admin_test_result',$data);
-  }
+  {  
+        $date['sumition_time'] = $this->Admin_test_model->sumition_time();
+    $_SESSION['right']=0;
+     $_SESSION['wrong']=0;
+       $data['Answer'] = $this->Admin_test_model->get_answer();
+       $wrong = 0;  foreach (  $data['Answer'] as $ans) {
+             $i++;
+              $total_question= $i; 
+             if (empty($_POST[$i])){$notated++ ;} else {
+              if ($_POST[$i]==$ans->ANS){  $_SESSION['right']++;}else{   $_SESSION['wrong']++ ;}} 
+           }
+         $true_or_not =   $this->Online_test_result_model->Save_result( $_SESSION['right'],$_SESSION['wrong'],$notate,$total_question);
+          $this->Admin_test_view();
+    }
+   
 }
 
 ?>

@@ -24,6 +24,7 @@ class Online_test_result_model extends CI_model
       'obtain_marks' => $right,
       'Date' => date('Y-m-d H:i:s'),
       'Wrong' => $worng,
+      'parcentage' => $right*100/$total,
       'Student_name'=> $_SESSION['username']);
       $this->db->insert('result_table',$data);
       return true;

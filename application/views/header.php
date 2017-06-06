@@ -25,16 +25,18 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li> <a href="<?= base_url();?>">Home</a></li>
-            <li> <a href="<?= base_url();?>">Online Test</a></li>
+          <?php  if (!isset($_SESSION['username'])) {?>   <li onclick="myFunction()"> <a href="#" >Online Test</a></li> <?php }else{?> <li> <a href="<?= base_url();?>index.php/Admin_test_controller"> Online Test</a></li>  <?php }?>
+             <?php  if (!isset($_SESSION['username'])) {?>   <li onclick="myFunction()"> <a href="#" >Quiz</a></li> <?php }else{?> <li> <a href="<?= base_url();?>index.php/Online_test_controller"> Quiz</a></li>  <?php }?>
             <li> <a href="<?= base_url();?>index.php/About_us" >About us </a></li>
-            <li> <a href="<?= base_url();?>index.php/auth/logout/"><span class="dropdown"> logout
+            <?php  if (!isset($_SESSION['username'])) {?> <li onclick="myFunction()"> <a >LogIn</a></li> <?php }else{?> <li> <a href="<?= base_url();?>index.php/auth/logout/"><span class="dropdown"> logout
   <span class="caret"></span>
   <ul class="dropdown-menu">
     <li><a href="#">HTML</a></li>
     <li><a href="#">CSS</a></li>
     <li><a href="#">JavaScript</a></li>
   </ul>
-</span></a></li> 
+</span></a></li>  <?php }?>
+            
           </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
