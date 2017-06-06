@@ -19,8 +19,10 @@
       <h4>Offering success orientation for each student</h4>
    </div>
   </div>
-  <div class="popup" >
-  <span class="popuptext" id="myPopup"><?php
+  <div>
+    <div class="popup" >
+  <span class="popuptext" id="myPopup">
+  <?php if (!isset($_SESSION['username'])){
 $login = array(
   'name'  => 'login',
   'id'  => 'login',
@@ -39,6 +41,7 @@ $password = array(
   'name'  => 'password',
   'id'  => 'password',
   'size'  => 30,
+  'maxlength' => 80,
 );
 $remember = array(
   'name'  => 'remember',
@@ -112,15 +115,15 @@ $captcha = array(
   </tr>
 </table>
 <?php echo form_submit('submit', 'Let me in'); ?>
-<?php echo form_close(); ?>
+<?php echo form_close();  
+ } 
+ ?>
 !</span>
 </div>
-
+  </div>
+  sdsa
 </body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
+
 <style>
 /* Popup container - can be anything you want */
 .popup {
@@ -145,8 +148,8 @@ $captcha = array(
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    margin-left: -180px;
-    margin-top: -200px;
+    margin-left: 80px;
+    margin-top: -160px;
 }
 
 /* Popup arrow */
@@ -177,10 +180,9 @@ $captcha = array(
     to {opacity:1 ;}
 }
 </style>
-</head>
-<body style="text-align:center">
 
-<h2>Popup</h2>
+
+
 
 
 

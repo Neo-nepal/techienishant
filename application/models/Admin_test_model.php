@@ -64,6 +64,31 @@ $data = array('start_time' => $start_time,
     $query = $this->db->get('result_table');
        return $query->result();
    }
+   public function link_en_di_able()
+   {
+   $this->db->where('username', $_SESSION['username']);
+    $query = $this->db->get('link_en_di_able');
+     return $query->result();
+   }
+   public function set_status()
+   {
+     $data = array('status' => 0,
+      'username'=> $_SESSION['username']);
+        $this->db->insert('link_en_di_able',$data);
+    
+   }
+   public function get_link_en_di_able()
+   {
+    $this->db->where('username',$_SESSION['username']);
+        $query =  $this->db->get('link_en_di_able');
+          return $query->result();
+   }
+   public function update_status()
+   {
+        $data = array('status' =>0);
+         $this->db->where('username', $_SESSION['username']);
+        $this->db->update('link_en_di_able',$data);
+   }
 }
 
  ?>
