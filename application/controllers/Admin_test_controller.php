@@ -10,8 +10,9 @@ class Admin_test_controller extends CI_controller
   function __construct()
   {
     parent::__construct();
-    $this->load->helper('url');
-    $this->load->model('Admin_test_model');
+   if (!isset($_SESSION['username'])) {
+     redirect('auth');
+     }
   }
   public function index()
   { 
@@ -38,13 +39,31 @@ class Admin_test_controller extends CI_controller
     }
    public function Admin_test_view()
   {   
-          
+
      $data['admin_test_details'] = $this->Admin_test_model->admin_test_details();
      $data['admin_test_data']= $this->Admin_test_model->Get_all_data();
      $data['admin_test']= $this->Admin_test_model->get_data_admin_test();
      foreach ( $data['admin_test_details'] as  $giventime) { $giventime->Time ;}
       $this->Admin_test_model->set_time($giventime->Time);
+
+     $data['link_en_di_able'] =  $this->Admin_test_model->link_en_di_able();
+      if (!empty($data['link_en_di_able'])) {
+        foreach ( $data['link_en_di_able'] as $key) 
+        if ($key->status==0) {
+        redirect('Admin_test_controller');
+        }
+        else
+      {
+        $this->load->view('Admin Test/Admin_test_view',$data);
+      }
+        
+      }
+      else
+      {
       $this->load->view('Admin Test/Admin_test_view',$data);
+      }
+     
+     
 
    }
   public function Admin_result()
@@ -63,8 +82,7 @@ class Admin_test_controller extends CI_controller
               if ($_POST[$i]==$ans->ANS){  $_SESSION['right']++;}else{   $_SESSION['wrong']++ ;}} 
            }
          $true_or_not =   $this->Online_test_result_model->Save_result( $_SESSION['right'],$_SESSION['wrong'],$notate,$total_question);
-      $data['get_result']=$this->Admin_test_model->get_result();
-      $this->load->view('Admin Test/Result_show',$data);
+    redirect('Admin_test_controller');
     }
    
 }

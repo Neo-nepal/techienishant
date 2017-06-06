@@ -14,11 +14,11 @@
 	 <td>Precentage</td>
 	<td> Date</td>
 </tr>
-
+<tr>
 	
 <?php foreach ($get_result as $key) {?>
 
-<tr>
+
 <td><?php echo $key->obtain_marks; ?></td>
 <td><?php echo $key->Wrong; ?></td>
 <td><?php echo ($key->total_marks) - ($key->obtain_marks + $key->Wrong); ?></td>
@@ -27,10 +27,10 @@
 <td><?php echo $key->parcentage; ?></td>
 <td><?php echo $key->Date; ?></td>
 
-</tr>
+
 <?php } ?>
 
-
+</tr>
 </table>
 </body>
 </html>

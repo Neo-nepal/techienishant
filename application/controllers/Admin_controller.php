@@ -198,7 +198,7 @@ class Admin_controller extends CI_Controller {
   {
 	  
 	  $this->Admin_model->allow();
-	  $this->index();
+	  redirect('Admin_controller');
   }
 
 }

@@ -80,7 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   ?>
 
  
-<button type="submit" class="btn btn-success">Submit Test</button>
+<button onClick="this.disabled=true;this.value='Sending, please wait...';this.form.submit();" type="submit">Submit Test</button>
 </div>  
 </div>
 </div>
