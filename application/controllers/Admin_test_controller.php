@@ -44,7 +44,7 @@ class Admin_test_controller extends CI_controller
      $data['admin_test_data']= $this->Admin_test_model->Get_all_data();
      $data['admin_test']= $this->Admin_test_model->get_data_admin_test();
      foreach ( $data['admin_test_details'] as  $giventime) { $giventime->Time ;}
-      $this->Admin_test_model->set_time($giventime->Time);
+     
 
      $data['link_en_di_able'] =  $this->Admin_test_model->link_en_di_able();
       if (!empty($data['link_en_di_able'])) {
@@ -54,12 +54,14 @@ class Admin_test_controller extends CI_controller
         }
         else
       {
+         $this->Admin_test_model->set_time($giventime->Time);
         $this->load->view('Admin Test/Admin_test_view',$data);
       }
         
       }
       else
       {
+       $this->Admin_test_model->set_time($giventime->Time);
       $this->load->view('Admin Test/Admin_test_view',$data);
       }
      
