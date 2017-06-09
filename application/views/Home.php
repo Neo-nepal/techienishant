@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
- <title>Online | Test</title>
-    <!-- css file included for css-->
-    <link rel="stylesheet" href="<?= base_url();?>assets/css/Main/home.css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>ARIES - Free Bootstrap Theme by WowThemes.net</title>
+<!-- Bootstrap Core CSS -->
+<link href="http://localhost/techienishant/assets/css/bootstrap.min.css" rel="stylesheet">
 
-<body>
+<!-- Custom Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic,700italic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
   <?php include('header.php');?>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<!-- Navigation -->
 
-  <div  class="Home_image">
-   <div id="we_will_open">
-      <h3>We Will Open</h3>
-      <h2>THE WORLD</h2>
-      <h4 style="color:white">of knowledge for you</h4>
-      <br/>
-      <a  href="<?= base_url();?>index.php/Readmore">READ MORE</a>
-      <h3>Helping students fulfil the potential</h3>
-      <h4>Offering success orientation for each student</h4>
-   </div>
-  </div>
-  <div>
-    <div class="popup" >
+<!-- Intro Header -->
+<header class="intro">
+<div class="intro-body">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+      
+         <div class="popup" >
   <span class="popuptext" id="myPopup">
   <?php if (!isset($_SESSION['username'])){
 $login = array(
@@ -120,9 +132,47 @@ $captcha = array(
  ?>
 !</span>
 </div>
+        <a href="#about" class="btn btn-circle page-scroll">
+        <i class="fa fa-angle-double-down animated"></i>
+        </a>
+      </div>
+    </div>
   </div>
-  sdsa
-</body>
+</div>
+</header>
+<!-- About Section -->
+<section id="about">
+<div class="container content-section text-center">
+  <div class="row">
+    <h2>LIL' ABOUT ME</h2>
+    <div class="col-lg-8 col-lg-offset-2">
+      <p>
+        Praesent ac dignissim diam. Aliquam lobortis elit et sapien eleifend, at sollicitudin metus elementum. Morbi imperdiet id ipsum at tristique. Nam suscipit tristique sem, <a href="#">quis</a> laoreet leo. Maecenas eget ante ipsum.
+      </p>
+      <p>
+        <a href="#" class="btnghost"><i class="fa fa-download"></i> Curriculum Vitae</a>
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Contact Section -->
+
+<section>
+  
+</section>
+<!-- Footer -->
+<footer>
+<div class="container text-center">
+  <p class="credits">
+    Copyright &copy; Your Website 2015<br/>
+    "Aries" Template by WowThemes.net
+  </p>
+</div>
+
+</footer>
+
 
 <style>
 /* Popup container - can be anything you want */

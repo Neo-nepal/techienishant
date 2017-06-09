@@ -6,29 +6,33 @@
     <link rel="stylesheet" href="<?= base_url();?>assets/css/bootstrap-theme.min.css">
     <!--End of Included file-->
     <!--Include presonal file of css-->
-    <link rel="stylesheet" href="<?= base_url();?>assets/css/Home/header.css">
+    <!-- Custom CSS -->
+<link href="http://localhost/techienishant/assets/css/theme.css" rel="stylesheet">
     <!-- END-->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>s
-      <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-     <a class="navbar-brand" href="<?= base_url();?>"><img alt="Brand" src="<?= base_url();?>assets/Image/logo.png" style="width:40px;height:30px;"></a>
-    </div>
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li> <a href="<?= base_url();?>">Home</a></li>
-          <?php  if (!isset($_SESSION['username'])) {?>   <li onclick="myFunction()"> <a href="#" >Online Test</a></li> <?php }else{?> <li> <a href="<?= base_url();?>index.php/Admin_test_controller"> Online Test</a></li>  <?php }?>
-             <?php  if (!isset($_SESSION['username'])) {?>   <li onclick="myFunction()"> <a href="#" >Quiz</a></li> <?php }else{?> <li> <a href="<?= base_url();?>index.php/Online_test_controller"> Quiz</a></li>  <?php }?>
-            <li> <a href="<?= base_url();?>index.php/About_us" >About us </a></li>
-            <?php  if (!isset($_SESSION['username'])) {?> <li onclick="myFunction()"> <a >LogIn</a></li> <?php }else{?> <li> <a href="<?= base_url();?>index.php/auth/logout/"><span class="dropdown"> logout
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+    <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand page-scroll" href="index.html">
+ ONLINE TEST </a>
+  </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+    <ul class="nav navbar-nav">
+      <li>
+      <a href="<?php echo base_url();?>">Home</a>
+      </li>
+      <li>
+     <?php  if (!isset($_SESSION['username'])) {?>   <li onclick="myFunction()"> <a href="#" >Online Test</a></li> <?php }else{?> <li> <a href="<?= base_url();?>index.php/Admin_test_controller"> Online Test</a></li>  <?php }?>
+      </li>
+      <li>
+      <?php  if (!isset($_SESSION['username'])) {?>   <li onclick="myFunction()"> <a href="#" >Quiz</a></li> <?php }else{?> <li> <a href="<?= base_url();?>index.php/Online_test_controller"> Quiz</a></li>  <?php }?>
+      </li>
+      <li>
+     <?php  if (!isset($_SESSION['username'])) {?> <li onclick="myFunction()"> <a >LogIn</a></li> <?php }else{?> <li> <a href="<?= base_url();?>index.php/auth/logout/"><span class="dropdown"> logout
   <span class="caret"></span>
   <ul class="dropdown-menu">
     <li><a href="#">HTML</a></li>
@@ -36,10 +40,13 @@
     <li><a href="#">JavaScript</a></li>
   </ul>
 </span></a></li>  <?php }?>
-            
-          </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+      </li>
+    </ul>
+  </div>
+  <!-- /.navbar-collapse -->
+</div>
+<!-- /.container -->
+</nav>
 </nav>  
 <script type="text/javascript">
   function Alert_function() {
@@ -47,3 +54,11 @@
 }
   
 </script>
+<!-- jQuery -->
+<script src="http://localhost/techienishant/assets/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="http://localhost/techienishant/assets/js/bootstrap.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="http://localhost/techienishant/assets/js/jquery.easing.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="http://localhost/techienishant/assets/js/theme.js"></script>
