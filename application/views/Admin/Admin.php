@@ -291,73 +291,7 @@
 <h3><b>For Study Contains</b></h3>
 			<p>This is for Insert study contains like explain ans heading and images.<br/>
 			Many operations that can apply on this . DELETE ,UPDATE, INSERT</p>
-	<!--<div id="subject_id1">
-		
-	<table>
-	 <tr>
-		<?php foreach ($classes as $key) {
-		$class_name ="<h5>". $key->class_name."</h5>";
-		$class_id = $key->class_id;?> 
-		<th style="float: left;"><samp  onclick="Select_subject1('<?php echo $class_id?>')"><p><img src="http://www.aimclasses.esy.es/assetes/Image/Subjects.png"> <?php echo $class_name ; ?> </p></samp><?php } ?></th>
-	</tr>
 
-</table>
-				
-				
-						<hr>
-	</div>
-
-
-		<script>
-			function Select_subject1(class_id)
-			 {
-				var xmlhttp;
-				if (window.XMLHttpRequest)
-					{// code for IE7+, Firefox, Chrome, Opera, Safari
-					 xmlhttp=new XMLHttpRequest();
-				}
-				else
-					{// code for IE6, IE5
-					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-				}
-				xmlhttp.onreadystatechange=function()
-					{
-					if (xmlhttp.readyState==4 && xmlhttp.status==200)
-					{
-					document.getElementById("subject_id1").innerHTML=xmlhttp.responseText;
-					}
-				}
-				 var queryString = "?class_id=" + class_id ;
-					 xmlhttp.open("GET", "<?= base_url();?>index.php/Admin_controller/fetch_subject_from_db1"+ queryString, true);
-					 xmlhttp.send(null); 
-			}
-	</script>
-	<script>
-			function Select_topics1(subject_id)
-			 {
-				var xmlhttp;
-				if (window.XMLHttpRequest)
-					{// code for IE7+, Firefox, Chrome, Opera, Safari
-					 xmlhttp=new XMLHttpRequest();
-				}
-				else
-					{// code for IE6, IE5
-					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-				}
-				xmlhttp.onreadystatechange=function()
-					{
-					if (xmlhttp.readyState==4 && xmlhttp.status==200)
-					{
-					document.getElementById("subject_id1").innerHTML=xmlhttp.responseText;
-					}
-				}
-				 var queryString = "?subject_id=" + subject_id ;
-					 
-					 xmlhttp.open("GET", "<?= base_url();?>index.php/Admin_controller/fetch_topics_from_db1"+ queryString, true);
-					 xmlhttp.send(null); 
-			 
-			 }
-	</script>-->
 </div>
 							 
 								 <div id="Admin_test" class="tab-pane fade">
@@ -426,7 +360,17 @@
 												</div>
 												<div class="col-xs-6">
 												 <form action="<?=base_url();?>index.php/insert_controller/insert_admin_data" onsubmit="return alerwt()" method="POST">
-													<input type="text" name="class" placeholder="Class" value=" <?php if(empty($key->class_name)){ echo "0";}else{ echo $key->class_name; } ?>"><br>
+												 <?php $_SESSION['truecounter']=0; ?>
+														<div class="form-group">
+															<label id="sell">Select Class:</label>
+															<select  id="class_id1" name="class_id" class="form-control" onchange="select_subject1()">	
+																<option>Select Class</option>
+																	<?php foreach ($classes as $class) {?>
+																		<option value="<?php echo "$class->class_id";?>"><?php echo "$class->class_name";?></option><?php }?>
+															</select>
+														</div>
+														<input type="text" name="class_name" placeholder="Subject" value="<?php if(empty($key->subjec_name)){ echo "0";}else{ echo $key->subjec_name; } ?>"><br>
+														<input type="text" name="Unque_code" placeholder="unique" value="<?php if(empty($key->subjec_name)){ echo "0";}else{ echo $key->subjec_name; } ?>"><br>
 												 <input type="text" name="Subject" placeholder="Subject" value="<?php if(empty($key->subjec_name)){ echo "0";}else{ echo $key->subjec_name; } ?>"><br>
 												 <input type="text" name="Topics" placeholder="Topic" value=" <?php if(empty($key->topic_name)){ echo "0";}else{ echo $key->topic_name; }?>"><br>
 												 <input type="time" name="time" value="<?php if(empty($key->Time)){ echo "0";}else{ echo $key->Time; } ?>" placeholder="Time (Example :- 2, 2.5 )Numerical"><br>

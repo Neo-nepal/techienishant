@@ -7,7 +7,8 @@ class Admin_test_model extends CI_model
   }
 
   public function Get_all_data()
-  { 
+  {   
+    $this->db->where('class_id',$_SESSION['class_id']);
     $query =  $this->db->get('question_table_admin_test');
     return $query->result();
   }
@@ -45,6 +46,7 @@ $endTime = strtotime("+ $hourString hours + $minuteString minutes + $Secondstrin
  $endTime = date('H:i:s', $endTime);
 $data = array('start_time' => $start_time,
       'Ending_time' => $endTime,
+      
       'Date' => $dateString,
       'users_name'=> $_SESSION['username']);
         $this->db->insert('Admin_test',$data);
@@ -54,7 +56,8 @@ $data = array('start_time' => $start_time,
    {
      date_default_timezone_set('Asia/Kolkata');
    $submit_time = date("H:i:s");
-   $data = array('submit_time' => $submit_time);
+   $data = array('submit_time' => $submit_time,
+    'unique_code' => $_SESSION['unique_test_code'],);
     $this->db->where( 'users_name', $_SESSION['username']);
    $this->db->update('Admin_test',$data);
    }

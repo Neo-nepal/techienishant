@@ -251,22 +251,25 @@ class Insert_model extends CI_model
      $query = $this->db->get('admin_test_details');
        return $query->result();
      }
-     public function insert_admin_data()
+     public function insert_admin_data($code)
      {
       $this->db->set('subjec_name',$_POST['Subject']); 
      $this->db->set('topic_name',$_POST['Topics']);
-     $this->db->set('class_name',$_POST['class']);
       $this->db->set('Time',$_POST['time']); 
-      $this->db->set('sr_no',1);
+      $this->db->set('unique_code',$code); 
+      $this->db->set('Time',$_POST['time']); 
+      $this->db->set('class_id',$_POST['class_id']);
      $this->db->insert('admin_test_details');
      }
-      public function update_admin_data()
+      public function update_admin_data($code)
      {
       $this->db->set('subjec_name',$_POST['Subject']); 
      $this->db->set('topic_name',$_POST['Topics']);
-     $this->db->set('class_name',$_POST['class']);
+     $this->db->set('class_id',$_POST['class']);
       $this->db->set('Time',$_POST['time']); 
-      $this->db->where('sr_no',1);
+      $this->db->where('class_id',$_POST['class_id']);
+      $this->db->set('unique_code',$code);
+      $this->db->set('class_id',$_POST['class_id']); 
      $this->db->update('admin_test_details');
      }
      public function Admin_question_test()
@@ -277,6 +280,7 @@ class Insert_model extends CI_model
     $this->db->set('B',$_POST['B']);
     $this->db->set('C',$_POST['C']);
     $this->db->set('D',$_POST['D']);
+     $this->db->set('class_id',$_SESSION['class_id_4_admin']);
      $this->db->set('ANS',$_POST['ans']); 
      $this->db->insert('question_table_admin_test'); 
      }
@@ -353,6 +357,7 @@ class Insert_model extends CI_model
     $this->db->set('B',$_SESSION['B_admin']);
     $this->db->set('C', $_SESSION['C_admin']);
     $this->db->set('D', $_SESSION['D_admin']);
+    $this->db->set('class_id', $_SESSION['class_id_4_admin']); 
      $this->db->set('ANS', $_SESSION['ans_admin']); 
      $this->db->insert('question_table_admin_test'); 
      }
@@ -361,6 +366,18 @@ class Insert_model extends CI_model
      {
           $this->db->where('question_id',$_SESSION['question_id']); 
           $this->db->delete('question_table');
+     }
+     public function Set_class_id_in_test()
+     {
+  
+     $this->db->set('class_id', $_POST['class_id']); 
+     $this->db->insert('question_table_admin_test'); 
+     }
+      public function update_class_id_in_test()
+     {
+  
+     $this->db->set('class_id', $_POST['class_id']); 
+     $this->db->insert('question_table_admin_test'); 
      }
 }?>  
 

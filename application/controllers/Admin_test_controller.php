@@ -15,7 +15,12 @@ class Admin_test_controller extends CI_controller
      }
   }
   public function index()
-  { 
+  {   
+    $data['classes'] = $this->Online_test_model->Users_class();
+    foreach ($data['classes'] as $key) {
+      $_SESSION['class_id'] = $key->gender;
+    }
+
     $data['link_en_di_able'] =  $this->Admin_test_model->link_en_di_able();
       if (!empty($data['link_en_di_able'])) {
         foreach ( $data['link_en_di_able'] as $key) 
@@ -43,9 +48,15 @@ class Admin_test_controller extends CI_controller
      $data['admin_test_details'] = $this->Admin_test_model->admin_test_details();
      $data['admin_test_data']= $this->Admin_test_model->Get_all_data();
      $data['admin_test']= $this->Admin_test_model->get_data_admin_test();
-     foreach ( $data['admin_test_details'] as  $giventime) { $giventime->Time ;}
-     
-
+     foreach ( $data['admin_test_details'] as  $giventime) { $giventime->Time ;  $giventime->unique_code ;}
+     foreach ( $data['admin_test'] as $key ){}
+      $_SESSION['unique_test_code'] = $giventime->unique_code;
+     if ($giventime->unique_code == $key->unique_code) {
+      echo "You have already done your test";
+     // redirect('Admin_test_controller');
+      }
+     else
+     {
      $data['link_en_di_able'] =  $this->Admin_test_model->link_en_di_able();
       if (!empty($data['link_en_di_able'])) {
         foreach ( $data['link_en_di_able'] as $key) 
@@ -53,20 +64,20 @@ class Admin_test_controller extends CI_controller
         redirect('Admin_test_controller');
         }
         else
-      {
-         $this->Admin_test_model->set_time($giventime->Time);
+      {  
+        $this->Admin_test_model->set_time($giventime->Time);
+        $data['admin_test']= $this->Admin_test_model->get_data_admin_test();
         $this->load->view('Admin Test/Admin_test_view',$data);
       }
         
       }
       else
       {
-       $this->Admin_test_model->set_time($giventime->Time);
-      $this->load->view('Admin Test/Admin_test_view',$data);
+       $this->Admin_test_model->set_time($giventime->Time); 
+        $data['admin_test']= $this->Admin_test_model->get_data_admin_test();
+        $this->load->view('Admin Test/Admin_test_view',$data);
       }
-     
-     
-
+     }
    }
   public function Admin_result()
   {  
