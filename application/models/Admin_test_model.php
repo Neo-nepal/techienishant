@@ -47,6 +47,7 @@ $endTime = strtotime("+ $hourString hours + $minuteString minutes + $Secondstrin
 $data = array('start_time' => $start_time,
       'Ending_time' => $endTime,
       
+    'unique_code' => $_SESSION['unique_test_code'],
       'Date' => $dateString,
       'users_name'=> $_SESSION['username']);
         $this->db->insert('Admin_test',$data);
@@ -56,8 +57,7 @@ $data = array('start_time' => $start_time,
    {
      date_default_timezone_set('Asia/Kolkata');
    $submit_time = date("H:i:s");
-   $data = array('submit_time' => $submit_time,
-    'unique_code' => $_SESSION['unique_test_code'],);
+   $data = array('submit_time' => $submit_time,);
     $this->db->where( 'users_name', $_SESSION['username']);
    $this->db->update('Admin_test',$data);
    }

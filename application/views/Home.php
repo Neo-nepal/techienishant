@@ -9,9 +9,11 @@
 <title>ARIES - Free Bootstrap Theme by WowThemes.net</title>
 <!-- Bootstrap Core CSS -->
 <link href="http://localhost/techienishant/assets/css/bootstrap.min.css" rel="stylesheet">
-
+<!-- Custom CSS -->
+<link href="http://localhost/techienishant/assets/css/theme.css" rel="stylesheet">
+<link href="http://localhost/techienishant/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
 <!-- Custom Fonts -->
-<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://localhost/techienishant/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic,700italic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -172,6 +174,14 @@ $captcha = array(
 </div>
 
 </footer>
+<!-- jQuery -->
+<script src="http://localhost/techienishant/assets/js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="http://localhost/techienishant/assets/js/bootstrap.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="http://localhost/techienishant/assets/js/jquery.easing.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="http://localhost/techienishant/assets/js/theme.js"></script>
 
 
 <style>

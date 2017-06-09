@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="<?= base_url();?>assets/css/bootstrap-theme.min.css">
     <!--End of Included file-->
     <!--Include presonal file of css-->
-    <!-- Custom CSS -->
-<link href="http://localhost/techienishant/assets/css/theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= base_url();?>assets/css/Home/header.css">
     <!-- END-->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -54,11 +53,3 @@
 }
   
 </script>
-<!-- jQuery -->
-<script src="http://localhost/techienishant/assets/js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="http://localhost/techienishant/assets/js/bootstrap.min.js"></script>
-<!-- Plugin JavaScript -->
-<script src="http://localhost/techienishant/assets/js/jquery.easing.min.js"></script>
-<!-- Custom Theme JavaScript -->
-<script src="http://localhost/techienishant/assets/js/theme.js"></script>
