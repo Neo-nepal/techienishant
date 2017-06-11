@@ -18,7 +18,7 @@ class Online_test_controller extends CI_Controller {
 			$_SESSION['class_id'] = $key->gender;
       $this->search_subject($key->gender);
     }
-		$this->load->view('online test/Online_test_view_home.php',$data);
+	//	$this->load->view('online test/Online_test_view_home.php',$data);
   	}
 
 	public function search_subject($class_id)

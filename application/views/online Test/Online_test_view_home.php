@@ -120,7 +120,4 @@
 	         xmlhttp.send(null); 
 			  
 			}</script>
-			<script type="text/javascript">
-				
-				
-			</script>
+			
